@@ -1,6 +1,6 @@
 require 'pry'
 class Owner
-	@@owners = []
+	OWNERS = []
 	attr_accessor :name, :pets
 	attr_reader :species
   # code goes here
@@ -16,19 +16,19 @@ class Owner
   end
 
   def save
-  	@@owners << self
+  	OWNERS << self
   end
 
   def self.all
-  	@@owners
+  	OWNERS
   end
   	
   def self.reset_all
-  	@@owners.clear
+  	OWNERS.clear
   end
 
   def self.count
-  	@@owners.size
+  	OWNERS.size
   end
 
   def species
