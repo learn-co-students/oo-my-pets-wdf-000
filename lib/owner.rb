@@ -73,19 +73,14 @@ class Owner
   def sell_pets
   	self.pets.each do |type, type_pets|
   		type_pets.each do |pet|
-  			# binding.pry
-  			pet.mood = "nervous" if pet.mood == nil || pet.mood != "nervous"
-  			# binding.pry
+  			pet.mood = "nervous"
   		end
   	end
   	self.pets.clear
   end
 
   def list_pets
-  	dog_n = self.pets[:dogs].size
-  	cat_n = self.pets[:cats].size
-  	fish_n = self.pets[:fishes].size
-  	"I have #{fish_n} fish, #{dog_n} dog(s), and #{cat_n} cat(s)."
+  	"I have #{pets[:fishes].size} fish, #{pets[:dogs].size} dog(s), and #{pets[:cats].size} cat(s)."
   end
 
 end
