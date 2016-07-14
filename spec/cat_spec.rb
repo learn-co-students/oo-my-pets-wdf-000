@@ -12,17 +12,18 @@ describe Cat do
     expect(cat.name).to eq("crookshanks")
   end
 
-  it "can't change its name" do 
+  it "can't change its name" do
     expect { cat.name = "mr. whiskers" }.to raise_error
+    #warning message saying that the raise_error may not be the best way to write the test
   end
 
   it "initializes with a nervous mood" do
     expect(cat.mood).to eq("nervous")
   end
 
-  it "can change its mood" do 
+  it "can change its mood" do
     cat.mood = "playful"
     expect(cat.mood).to eq("playful")
   end
-  
+
 end
