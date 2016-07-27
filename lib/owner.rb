@@ -75,13 +75,23 @@ attr_reader :species
 	end
 
 	def sell_pets
-		@pets.map do |type, pets|
-			pets.map do |feelings|
-				feelings.mood="nervous"
+		@pets.each do |type, pets|
+			pets.each do |pet|
+				pet.mood="nervous"
 			end
+			pets.clear
 		end
-		@pets.clear
 	end
+
+
+	# 	@pets.map do |type, pets|
+	# 		pets.map do |pet|
+	# 			pet.mood="nervous"
+	# 		end
+	# 		pets.clear
+	# 	end
+	# 	@pets.clear
+	# end
 
 	def list_pets
 		@pets[:fishes].count
@@ -92,3 +102,8 @@ attr_reader :species
 	end
 
 end
+
+
+
+
+
