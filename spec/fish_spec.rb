@@ -17,6 +17,7 @@ describe Fish do
   end
 
   it "initializes with a nervous mood" do
+    fish = Fish.new("Nemo") 
     expect(fish.mood).to eq("nervous")
   end
 
